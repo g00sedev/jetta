@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  //- h1= title
+  div(id='container')
+    div(id='liveVideo')
+      video(id='inputVideo', class='faceTracking', width='800px', height='700px')
+      canvas(id='overlay', class='faceTracking', width='800px', height='700px')
+    div(id='eventStream')
+  button(id='startbutton', class='btn', onclick='startVideo()') Start
+  button(id='stopbutton', class='btn', onclick='stopVideo()') Stop
+  script(type='text/javascript', src='/javascripts/clmtrackr.js')
+  script(type='text/javascript', src='/javascripts/main.js')
